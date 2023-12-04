@@ -37,12 +37,6 @@ def gerar_estado(n):
     estado = [random.randint(1, n) for _ in range(n)]
     return estado
 
-def temperatura_atual(iteracao, max_iteracoes, temp_inicial):
-    return temp_inicial * (1 - iteracao / max_iteracoes)
-
-def probabilidade_aceitar(delta_avaliacao, temperatura):
-    return 1.0 if delta_avaliacao < 0 else math.exp(-delta_avaliacao / temperatura) 
-
 def steepest_ascent_hill_climbing(inicial):
     melhor, atual = inicial, inicial
     melhor_eval = colisoes_diagonal(inicial) + colisoes_linha(inicial)
