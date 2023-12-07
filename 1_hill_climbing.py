@@ -84,7 +84,7 @@ def nqueens(estado):
 
     return contagem, estado
 
-n = 8
+n = 32
 estado_inicial = gerar_estado(n)
 reinicializacoes, resultado = nqueens(estado_inicial)
 
